@@ -9,6 +9,10 @@ char * PrintGreeting(int trigger){
 	return bad;
 }
 
+
+/* 
+ * Note: This isArrayInSortedOrder function only can take in int type of arra:
+ */
 int isArrayInSortedOrder(int arr[], int n){
 	 char * error = n;
 	 if(n <= 0){

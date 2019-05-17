@@ -43,6 +43,14 @@ void test_function_isArrayInSortedOrder_given_an_SortedArr_expected_1_as_return(
 	TEST_ASSERT_EQUAL_INT(TRUE, isSort);
 }
 
+void test_function_isArrayInSortedOrder_given_an_CharArr_expected_0_as_return(void)
+{
+	int A[]={10,3,456,2,5};
+	int size = (sizeof(A)/sizeof(int));
+	int isSort = isArrayInSortedOrder(A, size);
+	TEST_ASSERT_EQUAL_INT(FALSE, isSort);
+}
+
 void test_function_isArrayInSortedOrder_given_an_onlyOneElementArr_expected_1_as_return(void)
 {
 	int A[]={1};
@@ -68,7 +76,7 @@ void test_function_isArrayInSortedOrder_given_an_onlyOneElementArr_expected_1_as
 	TEST_FAIL_MESSAGE("Expect DATA_NOT_FOUND. But no exception thrown.");
 	} Catch(e){
 		printf(e->errorMsg);
-		TEST_ASSERT_EQUAL(DATA_NOT_FOUND, e->errorCode);
+		TEST_ASSERT_EQUAL(EMPTY_ARRAY, e->errorCode);
 		freeError(e);
 		} 
 	//int isSort = isArrayInSortedOrder(A, size);
